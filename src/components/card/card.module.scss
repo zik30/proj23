@@ -1,0 +1,122 @@
+.card{
+    
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+
+    background-color: #ffffffb8;
+    backdrop-filter: blur(40px);
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(241, 240, 240, 0.35) 0px 5px 15px;
+
+    hr{
+        width: 99%;
+    }
+    h3{
+        color: #021b0e;
+        font-size: 36px;
+        text-align: center;
+        margin: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,sans-serif;
+    }
+    button{
+        margin: 0 auto;
+        width: 100px;
+        height: 50px;
+        background-color: #0307dd;
+        color: #f2f5f3;
+        font-weight: 500;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+            background-color: #6b89f5;
+        }
+    }
+}
+
+
+
+.modaloverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(5px);
+    img{
+        height: 400px;
+        width: 300px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .modal{
+        background-color: #ffffff66;
+        backdrop-filter: blur(40px);
+        padding: 20px;
+        border-radius: 20px;
+        position: relative;
+        audio{
+            display: block;
+        }
+        h3{
+            font-size: 30px;
+            margin: 0;
+            text-align: center;
+            color: #040110;
+            text-transform: uppercase;
+        }
+        button{
+            height: 40px;
+            width: 40px;
+            border: none;
+            background-color: #0307dd;
+            cursor: pointer;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: 0.5s;
+            &:hover{
+                background-color: #6b89f5;
+            }
+        }
+        p{
+            padding: 5px;
+            background-color: #0307dd;
+            color: #f2f5f3;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+      scale: 1;
+    }
+  }
